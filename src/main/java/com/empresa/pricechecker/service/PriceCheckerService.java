@@ -12,7 +12,7 @@ import java.util.List;
 public class PriceCheckerService {
 
     public String getPrices(String product) {
-        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "C:\\eclipse\\ProjetoRPA\\chromedriver-win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.mercadolivre.com.br");
