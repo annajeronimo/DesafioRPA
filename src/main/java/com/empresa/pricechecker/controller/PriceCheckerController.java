@@ -13,16 +13,18 @@ public class PriceCheckerController {
     private static final Logger logger = LoggerFactory.getLogger(PriceCheckerController.class);
     private final PriceCheckerService priceCheckerService;
 
+    // Injeção de dependência do serviço de verificação de preços
     public PriceCheckerController(PriceCheckerService priceCheckerService) {
         this.priceCheckerService = priceCheckerService;
     }
 
+    // Endpoint para verificar os preços
+    
     @GetMapping("/check-prices")
     public String checkPrices(@RequestParam String product) {
         logger.info("Iniciando busca de preços para o produto: " + product);
-        String result = priceCheckerService.getPrices(product);
+        String result = priceCheckerService.fetchPrices(product);
         logger.info("Busca de preços concluída.");
         return result;
     } 
 }
-

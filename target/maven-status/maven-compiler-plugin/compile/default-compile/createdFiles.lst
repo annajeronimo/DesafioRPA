@@ -1,0 +1,3 @@
+com\empresa\pricechecker\PriceCheckerApplication.class
+com\empresa\pricechecker\service\PriceCheckerService.class
+com\empresa\pricechecker\controller\PriceCheckerController.class
